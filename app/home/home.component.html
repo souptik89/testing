@@ -22,13 +22,13 @@
                 <ListView [items]="myItems" (itemTap)="onItemTap($event)">
                     <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
                         <StackLayout [class.odd]="odd" [class.even]="even">
-                            <GridLayout columns="auto,*">
-                                <Image src="~/assets/images/profile.png" stretch="none" col="0"></Image>
-                                <StackLayout col="1">
+                            <FlexboxLayout alignItems="center" justifyContent="flex-start">
+                                <Image src="~/assets/images/profile.png" stretch="none" order="1"></Image>
+                                <StackLayout order="2">
                                     <Label [text]='"user name " + i'></Label>
                                     <Label [text]='"No:" + item.id +"user details is" + item.name'></Label>
                                 </StackLayout>
-                            </GridLayout>
+                            </FlexboxLayout>
                         </StackLayout>
                     </ng-template>
                 </ListView>
