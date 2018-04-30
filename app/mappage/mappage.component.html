@@ -1,0 +1,17 @@
+<ActionBar class="action-bar">
+    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap)="goBackPage()"></NavigationButton>
+    <ActionItem (tap)="onShare()" ios.systemIcon="9" ios.position="left" android.systemIcon="ic_menu_share" android.position="actionBar"></ActionItem>
+    <ActionItem (tap)="onDelete()" ios.systemIcon="16" ios.position="right" text="delete" android.position="popup"></ActionItem>
+    <Label class="action-bar-title" text="Map"></Label>
+</ActionBar>
+
+<GridLayout class="page page-content" tkMainContent>
+
+    <ContentView height="100%" width="100%">
+        <Mapbox #map accessToken="pk.eyJ1IjoibWFzdWR3Z3Q4OSIsImEiOiJjamdmNm43eXAxeGVnMnhwZnBmYzU3ZmNrIn0.cKAAWY7BKMrcnGIVE3SxAw"
+            mapStyle="traffic_day" latitude="22.6235724" longitude="88.44127200000003" hideCompass="false" zoomLevel="15" showUserLocation="true"
+            disableZoom="false" disableRotation="false" disableScroll="false" disableTilt="true" (mapReady)="onMapReady($event)">
+        </Mapbox>
+    </ContentView>
+
+</GridLayout>
