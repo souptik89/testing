@@ -1,0 +1,50 @@
+.topboard {
+    background: #30c596;
+    text-align: center;
+   .icon {
+       font-size: 54;
+       margin-bottom: 10;
+   }
+    .name {
+        font-size: 24;
+        color: #ffffff;
+        text-transform: capitalize;
+    }
+    .mail {
+    font-size: 15;
+    color: #dfdfdf;
+    }
+    }
+
+  
+.bottom-grid {
+    padding: 0 0;
+    .stack-box {
+    padding: 0 0;
+    margin: 0 0;
+    box-sizing: border-box;
+    }
+    .flex-box {
+        background-color: #46d4f8;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+        border-radius: 4;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 10 0;
+        padding:20 0;
+        box-sizing: border-box;
+        .item-name {
+            font-size: 16;
+            color: #0d5b6e;
+            text-transform: capitalize;
+        }
+        .image {
+            width: auto;
+            max-width: 100%;
+            margin: 10 auto;
+            text-align: center;
+        }
+    }
+}
+

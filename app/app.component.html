@@ -1,8 +1,3 @@
-<!--
-RadSideDrawer is a UI component part of the Progress NativeScript UI set of components.
-Learn more about the RadSideDrawer UI component and how it can be customized in this documentation article:
-http://docs.telerik.com/devtools/nativescript-ui/Controls/NativeScript/SideDrawer/getting-started
--->
 <RadSideDrawer [drawerTransition]="sideDrawerTransition">
     <GridLayout tkDrawerContent rows="auto, *" class="sidedrawer sidedrawer-left">
         <StackLayout row="0" class="sidedrawer-header">
@@ -39,8 +34,12 @@ http://docs.telerik.com/devtools/nativescript-ui/Controls/NativeScript/SideDrawe
                     <Label col="0" text="&#xf013;" class="fa"></Label>
                     <Label col="1" text="Settings" class="p-r-10"></Label>
                 </GridLayout>
+                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isPageSelected('Listing')" (tap)="onNavItemTap('/Listing')">
+                    <Label col="0" text="" class="fa"></Label>
+                    <Label col="1" text="List" class="p-r-10"></Label>
+                </GridLayout>
                 <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isPageSelected('Mappage')" (tap)="onNavItemTap('/mappage')">
-                    <Label col="0" text="&#xf013;" class="fa"></Label>
+                    <Label col="0" text="" class="fa"></Label>
                     <Label col="1" text="Mappage" class="p-r-10"></Label>
                 </GridLayout>
             </StackLayout>

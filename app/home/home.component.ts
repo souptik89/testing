@@ -5,37 +5,27 @@ import { RouterExtensions } from "nativescript-angular/router";
 import { Input, ChangeDetectionStrategy } from '@angular/core';
 
 
-class DataItem {
-    constructor(public id: number, public name: string) { }
-}
+
 @Component({
     selector: "Home",
     moduleId: module.id,
     templateUrl: "./home.component.html",
-    styleUrls: ['home.css'],
+    styleUrls: ['home.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
-    public myItems: Array<DataItem>;
-    private counter: number;
+
     constructor(public routerExtensions: RouterExtensions) {
-        this.myItems = [];
-        this.counter = 0;
-        for (var i = 0; i < 50; i++) {
-            this.myItems.push(new DataItem(i, "lorem ipsum" + i));
-            this.counter = i;
-        }
+
     }
 
     ngOnInit(): void {
         // Init your component properties here.
     }
 
-    public onItemTap(args) {
-        console.log("------------------------ ItemTapped: " + args.index);
-    }
 
-    onNavItemTap(navItemRoute: string): void {
+
+    onItemTap(navItemRoute: string): void {
         this.routerExtensions.navigate([navItemRoute], {
             transition: {
                 name: "slideLeft",

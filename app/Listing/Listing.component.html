@@ -14,5 +14,37 @@
     <Label class="action-bar-title" text="List"></Label>
 </ActionBar>
 
-<StackLayout class="page">
-</StackLayout>
+<TabView [(ngModel)]="tabSelectedIndex" selectedColor="#FF0000" iosIconRenderingMode="alwaysOriginal" sdkExampleTitle sdkToggleNavButton>
+    <StackLayout *tabItem="{title: 'Profile'}">
+        <StackLayout>
+
+            <GridLayout rows="*">
+                <ListView [items]="myItems" (itemTap)="onItemTap($event)">
+                    <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+                        <StackLayout [class.odd]="odd" [class.even]="even">
+                            <FlexboxLayout class="flex-wrap" alignItems="center" justifyContent="flex-start">
+                                <Image class="image" src="~/assets/images/profile.png" stretch="none" order="1"></Image>
+                                <StackLayout order="2">
+                                    <Label class="name" [text]='"user name " + i'></Label>
+                                    <Label [text]='"No:" + item.id +"user details is" + item.name'></Label>
+                                </StackLayout>
+                            </FlexboxLayout>
+                        </StackLayout>
+                    </ng-template>
+                </ListView>
+            </GridLayout>
+        </StackLayout>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Stats'}">
+        <StackLayout>
+
+
+        </StackLayout>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Settings'}">
+        <StackLayout>
+
+
+        </StackLayout>
+    </StackLayout>
+</TabView>

@@ -1,0 +1,12 @@
+.flex-wrap {
+    padding: 10;
+}
+.flex-wrap .image {
+    max-width: 66;
+    margin-right:10; 
+}
+.flex-wrap .name {
+    font-size: 16;
+    color: #222222;
+    text-transform: capitalize;
+}
