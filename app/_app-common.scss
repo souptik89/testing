@@ -4,15 +4,18 @@
 .fa {
     font-family: "FontAwesome";
 }
-//button
 
+//button
 Button {
-    background-color: #4346ff;
-    color: #fff;
+    background-color: $btn-color;
+    border-width: 1;
+    border-color: transparent;
+    color: #ffffff;
     font-size: 18;
-    padding: 16 0;
+    padding: 10 0;
     margin: 10 20;
 }
+
 // Common page class
 .page-content {
     .page-placeholder {
@@ -21,7 +24,6 @@ Button {
         vertical-align: center;
         horizontal-align: center;
     }
-
     .page-icon {
         font-size: 72;
         vertical-align: top;
@@ -32,24 +34,25 @@ Button {
 }
 
 //Action bar
-ActionBar .action-bar-title {
-    horizontal-align: center;
-}
-
- // Drawer navigation custom styles
+ActionBar {
+    background-color: rgba($ab-background, 1);
+    border-width: 1;
+    border-color: transparent;
+    .action-bar-title {
+        horizontal-align: center;
+    }
+} // Drawer navigation custom styles
 $sidedrawer-header-image-size: 60;
 $sidedrawer-header-image-offset-top: 20;
 $sidedrawer-header-image-offset-bottom: 5;
 $sidedrawer-list-item-offset-left: 15;
 $sidedrawer-list-icon-offset: 10;
 $sidedrawer-list-icon-size: 20;
-
 .sidedrawer {
     &.sidedrawer-left {
-        background-color: $ab-background;
-
+        background-color: $background-light;
         .sidedrawer-header-image {
-            color: $background-dark;
+            color: $background-light;
             height: $sidedrawer-header-image-size;
             width: $sidedrawer-header-image-size;
             font-size: $sidedrawer-header-image-size;
@@ -57,27 +60,21 @@ $sidedrawer-list-icon-size: 20;
             margin-bottom: $sidedrawer-header-image-offset-bottom;
             margin-top: $sidedrawer-header-image-offset-top;
         }
-
         .footnote {
             color: rgba($ab-color, 0.5);
         }
     }
-
     .sidedrawer-header {
-        background-color: $ab-background;
-
+        background-color: $purple-dark;
         .sidedrawer-header-brand {
             color: $ab-color;
         }
     }
-
     .sidedrawer-content {
         background-color: $side-drawer-background;
-
         $sidedrawer-list-item-offset-left: 15;
         $sidedrawer-list-icon-offset: 10;
         $sidedrawer-list-icon-size: 20;
-
         .sidedrawer-list-item {
             padding-left: $sidedrawer-list-item-offset-left;
             Label {

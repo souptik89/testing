@@ -14,9 +14,33 @@
     <Label class="action-bar-title" text="Search"></Label>
 </ActionBar>
 
-<GridLayout class="page page-content" tkMainContent>
+<GridLayout rows="*" columns="*" class="page page-content" tkMainContent>
     <!-- <MapView (mapReady)="onMapReady($event)"></MapView> -->
     <!--   <maps:mapView latitude="{{ latitude }}" longitude="{{ longitude }}" mapAnimationsEnabled="{{ mapAnimationsEnabled }}" zoom="{{ zoom }}"
         bearing="{{ bearing }}" tilt="{{ tilt }}" mapReady="onMapReady" markerSelect="onMarkerSelect" markerBeginDragging="onMarkerBeginDragging"
         markerEndDragging="onMarkerEndDragging" markerDrag="onMarkerDrag" cameraChanged="onCameraChanged" /> -->
+
+    <TabView selectedIndex="{{tabSelectedIndex}}" selectedIndexChanged="onSelectedIndexChanged" selectedColor="#FF0000" iosIconRenderingMode="alwaysOriginal"
+        androidSelectedTabHighlightColor="red">
+        <TabViewItem title="NativeScript" color="blue">
+            <StackLayout>
+                <Label text="NativeScript" class="m-15 h2 text-left" color="blue"></Label>
+                <ScrollView>
+                    <StackLayout height="100%">
+                        <Label text="textcontent" textWrap="true" class="m-15"></Label>
+                        <Label text="textcontent" textWrap="true" class="m-15"></Label>
+                        <Label text="textcontent" textWrap="true" class="m-15"></Label>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </TabViewItem>
+        <TabViewItem title="Icon">
+            <StackLayout>
+                <!-- <Image class="m-t-30 m-b-15" src="res://menu" width="80" height="80" /> -->
+                <Label text="NativeScript" textWrap="true" class="h2 m-x-auto" color="blue"></Label>
+                <Label text="NativeScript" textWrap="true" class="h2 m-x-auto" color="blue"></Label>
+                <Label text="NativeScript" textWrap="true" class="h2 m-x-auto" color="blue"></Label>
+            </StackLayout>
+        </TabViewItem>
+    </TabView>
 </GridLayout>

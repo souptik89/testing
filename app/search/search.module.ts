@@ -3,6 +3,7 @@ import { NativeScriptCommonModule } from "nativescript-angular/common";
 
 import { SearchRoutingModule } from "./search-routing.module";
 import { SearchComponent } from "./search.component";
+
 /* import { registerElement } from "nativescript-angular/element-registry";
 registerElement("Mapbox", () => require("nativescript-mapbox").MapboxView); */
 

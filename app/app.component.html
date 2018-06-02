@@ -42,6 +42,10 @@
                     <Label col="0" text="" class="fa"></Label>
                     <Label col="1" text="Mappage" class="p-r-10"></Label>
                 </GridLayout>
+                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isPageSelected('Login')" (tap)="onNavItemTap('/login')">
+                    <Label col="0" text="" class="fa"></Label>
+                    <Label col="1" text="Login" class="p-r-10"></Label>
+                </GridLayout>
             </StackLayout>
         </ScrollView>
     </GridLayout>

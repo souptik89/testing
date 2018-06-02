@@ -1,0 +1,44 @@
+<StackLayout class="loginpage-content">
+    <ScrollView class="page-scroll" scrollBarIndicatorVisible="false">
+        <GridLayout rows="auto,auto,auto" width="100%" class="cut-bg">
+            <StackLayout row="0" class="login" width="100%">
+                <AbsoluteLayout width="100%" height="40%">
+                    <Image src="~/assets/images/cut-1.png" stretch="fill" width="100%" height="100%" top="0" left="0"></Image>
+                    <StackLayout width="100%" top="0" left="0">
+                        <Label class="m-t-10 text-center logo" text="Logo"></Label>
+                        <TextField class="m-t-10 m-b-10 m-l-15 m-r-15" hint="Email Address" keyboardType="email" returnKeyType="next" autocorrect="false"
+                            autocapitalization="none" [(ngModel)]="email"></TextField>
+                        <TextField class="m-t-10 m-b-10 m-l-15 m-r-15" hint="Password" secure="true" autocorrect="false" returnKeyType="done" autocapitalization="none"
+                            [(ngModel)]="password"></TextField>
+                        <Label class="m-t-10 m-b-10 m-l-15 m-r-15" text="Forgot password?" (tap)="onForgotPasswordTap()"></Label>
+                        <Button class="btn btn-login pull-right" id="lblNS" text="Login" (tap)="onloginButtonTap()"></Button>
+                    </StackLayout>
+                </AbsoluteLayout>
+            </StackLayout>
+            <StackLayout row="1" class="social" orientation="vertical" width="90%" height="180">
+                <Image src="~/assets/images/f.png" stretch="aspectFit" width="56" horizontalAlignment="left"></Image>
+                <Image src="~/assets/images/g.png" stretch="aspectFit" width="56" horizontalAlignment="center"></Image>
+                <Image src="~/assets/images/t.png" stretch="aspectFit" width="56" horizontalAlignment="right"></Image>
+            </StackLayout>
+            <StackLayout row="2" class="register" width="100%">
+                <AbsoluteLayout width="100%" height="100%">
+                    <Image src="~/assets/images/cut-2.png" stretch="aspectFit" width="100%" height="100%" top="0" left="0"></Image>
+                    <StackLayout width="100%" top="60" left="0">
+                        <Label class="m-t-10 m-l-15 text-left logo" text="logo"></Label>
+                        <TextField class="m-t-10 m-b-10 m-l-15 m-r-15" hint="Name" returnKeyType="next" autocorrect="false" autocapitalization="none"
+                            [(ngModel)]="name"></TextField>
+                        <TextField class="m-t-10 m-b-10 m-l-15 m-r-15" hint="Email Address" keyboardType="email" returnKeyType="next" autocorrect="false"
+                            autocapitalization="none" [(ngModel)]="email"></TextField>
+                        <TextField class="m-t-10 m-b-10 m-l-15 m-r-15" hint="Password" secure="false" returnKeyType="next" autocorrect="false" autocapitalization="none"
+                            [(ngModel)]="password"></TextField>
+                        <TextField class="m-t-10 m-b-10 m-l-15 m-r-15" hint="Password" secure="true" returnKeyType="done" autocorrect="false" autocapitalization="none"
+                            [(ngModel)]="password"></TextField>
+
+                        <Button class="btn btn-login pull-right" text="Signup" (tap)="onSigninButtonTap()"></Button>
+                    </StackLayout>
+                </AbsoluteLayout>
+
+            </StackLayout>
+        </GridLayout>
+    </ScrollView>
+</StackLayout>
